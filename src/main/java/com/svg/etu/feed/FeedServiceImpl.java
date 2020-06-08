@@ -19,9 +19,9 @@ public class FeedServiceImpl implements FeedService {
 	}
 
 	@Override
-	public List<FeedVO> getFeedList() {
+	public List<FeedVO> getFeedList(int location) {
 		System.out.println("----------[getFeedList 함수 호출]----------");
-		List<FeedVO> feedList = sqlSessionTemplate.selectList("getFeedList"); 
+		List<FeedVO> feedList = sqlSessionTemplate.selectList("getFeedList", location); 
 		return feedList;
 	}
 	

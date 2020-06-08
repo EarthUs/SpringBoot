@@ -11,10 +11,9 @@ public class LocationServiceImpl implements LocationService {
 	SqlSessionTemplate sqlSessionTemplate;
 
 	@Override
-	public int getLocation(String sigugun) {
-		LocationVO vo = sqlSessionTemplate.selectOne("getLocation", sigugun);
-		int id = vo.getId();
-		return id;
+	public LocationVO getLocation(LocationVO vo) {
+		LocationVO temp = sqlSessionTemplate.selectOne("getLocation", vo);
+		return temp;
 	}
 
 }

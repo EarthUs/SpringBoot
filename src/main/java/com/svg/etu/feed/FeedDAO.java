@@ -13,6 +13,6 @@ public interface FeedDAO {
 	/*
 	 * Feed 리스트를 가져오는 함수
 	 */
-	public List<FeedVO> getFeedList();
+	public List<FeedVO> getFeedList(int location);
 	
 }
