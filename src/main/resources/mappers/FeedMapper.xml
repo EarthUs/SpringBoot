@@ -10,5 +10,19 @@
     <select id="getFeedList" resultType="com.svg.etu.feed.FeedVO">
     	select *
     	from feed
+    	inner join location 
+		on feed.location = location.id
+    	where 1 = 1
+    	<if test="country != null">
+    		and country = #{country}
+    	</if> 
+    	<if test="sido != null">
+    		and sido = #{sido}
+    	</if>
+    	<if test="sigugun != null">
+    		and sigugun = #{sigugun}
+    	</if>
     </select>
+    
+    
 </mapper>

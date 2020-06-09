@@ -2,6 +2,8 @@ package com.svg.etu.feed;
 
 import java.util.List;
 
+import com.svg.etu.location.LocationVO;
+
 public interface FeedService {
 	
 	/*
@@ -12,7 +14,7 @@ public interface FeedService {
 	/*
 	 * Feed 리스트를 가져오는 함수
 	 */
-	List<FeedVO> getFeedList(int location);
+	List<FeedVO> getFeedList(LocationVO vo);
 
 	
 }
