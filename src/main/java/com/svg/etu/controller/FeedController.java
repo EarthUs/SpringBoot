@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.svg.etu.feed.FeedService;
 import com.svg.etu.feed.FeedVO;
+import com.svg.etu.location.LocationVO;
 
 @RestController
 @RequestMapping("/feeds")
@@ -33,8 +34,8 @@ public class FeedController {
 	 * 피드 리스트를 가져옴
 	 * @return List
 	 */
-	@RequestMapping(method=RequestMethod.GET, value = "")
-	public List<FeedVO> getFeedList(int location) {
-		return feedService.getFeedList(location);
+	@RequestMapping(method=RequestMethod.GET)
+	public List<FeedVO> getFeedList(LocationVO vo) {
+		return feedService.getFeedList(vo);
 	}
 }
