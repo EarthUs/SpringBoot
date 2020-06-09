@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.svg.etu.feed.FeedService;
 import com.svg.etu.feed.FeedVO;
 import com.svg.etu.location.LocationVO;
+import com.svg.etu.user.UserVO;
 
 @RestController
 @RequestMapping("/feeds")
@@ -37,5 +38,10 @@ public class FeedController {
 	@RequestMapping(method=RequestMethod.GET)
 	public List<FeedVO> getFeedList(LocationVO vo) {
 		return feedService.getFeedList(vo);
+	}
+	
+	@RequestMapping(method=RequestMethod.GET, value="/count")
+	public int getMyFeedCount(UserVO vo) {
+		return feedService.getMyFeedCount(vo);
 	}
 }

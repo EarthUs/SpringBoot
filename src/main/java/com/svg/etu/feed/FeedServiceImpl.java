@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.svg.etu.location.LocationVO;
+import com.svg.etu.user.UserVO;
 
 @Service("FeedService")
 public class FeedServiceImpl implements FeedService {
@@ -25,6 +26,13 @@ public class FeedServiceImpl implements FeedService {
 		System.out.println("----------[getFeedList 함수 호출]----------");
 		List<FeedVO> feedList = sqlSessionTemplate.selectList("getFeedList", vo); 
 		return feedList;
+	}
+
+	@Override
+	public int getMyFeedCount(UserVO vo) {
+		System.out.println("----------[getMyFeedCount 함수 호출]----------");
+		int count = sqlSessionTemplate.selectOne("getMyFeedCount", vo);
+		return count;
 	}
 	
 	

@@ -24,5 +24,9 @@
     	</if>
     </select>
     
-    
+    <select id="getMyFeedCount" resultType="java.lang.Integer">
+    	select count(*)
+    	from feed
+    	where user_id = #{id}
+    </select>
 </mapper>
