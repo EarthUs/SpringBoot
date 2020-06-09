@@ -2,8 +2,25 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
 <mapper namespace="com.svg.etu.user.UserDAO">
-    <select id="getUserList" resultType="com.svg.etu.user.UserVO">
+    <select id="getUser" resultType="com.svg.etu.user.UserVO">
     	select *
     	from user
     </select>
+    
+    <insert id="insertUser">
+    	insert into user(social_type, img, nick_name, email, location, steps, created_at)
+    	values(#{social_type}, #{img}, #{nick_name}, #{email}, #{location}, 0, now())
+    </insert>
+    
+    <update id="updateUser">
+    	update user set
+    	img = img,
+    	nick_name = nick_name
+    	where id = #{id}
+    </update>
+    
+    <delete id="deleteUser">
+    	delete user
+    	where id = #{id}
+    </delete>
 </mapper>

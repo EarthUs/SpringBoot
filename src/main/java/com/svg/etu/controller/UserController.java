@@ -15,11 +15,35 @@ public class UserController {
 	private UserService userService;
 	
 	/*
-	 * 유저 리스트를 가져옴
-	 * @return List<UserVO>
+	 * 유저 정보를 가져옴
+	 * @return UserVO
 	 */
-	@RequestMapping(method=RequestMethod.GET, value = "")
-	public UserVO getUser() {
+	@RequestMapping(method=RequestMethod.GET)
+	public UserVO getUser(UserVO vo) {
 		return userService.getUser();
+	}
+	
+	/*
+	 * 유저 정보를 삽입
+	 */
+	@RequestMapping(method=RequestMethod.POST)
+	public void insertUser(UserVO vo) {
+		userService.insertUser(vo);
+	}
+	
+	/*
+	 * 유저 정보를 수정
+	 */
+	@RequestMapping(method=RequestMethod.PUT)
+	public void updateUser(UserVO vo) {
+		userService.updateUser(vo);
+	}
+	
+	/*
+	 * 유저 정보를 삭제
+	 */
+	@RequestMapping(method=RequestMethod.DELETE)
+	public void deleteUser(UserVO vo) {
+		userService.deleteUser(vo);
 	}
 }
