@@ -34,7 +34,7 @@ public class FeedController {
 	 * @return List
 	 */
 	@RequestMapping(method=RequestMethod.GET, value = "")
-	public List<FeedVO> getFeedList() {
-		return feedService.getFeedList();
+	public List<FeedVO> getFeedList(int location) {
+		return feedService.getFeedList(location);
 	}
 }

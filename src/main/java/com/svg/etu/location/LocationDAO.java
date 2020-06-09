@@ -2,8 +2,8 @@ package com.svg.etu.location;
 
 public interface LocationDAO {
 	/*
-	 * 시구군 정보로 location id를 가져오는 함수
+	 * 시구군 정보로 location 정보를 가져오는 함수
 	 */
-	public int getLocation(String sigugun);
+	public LocationVO getLocation(LocationVO vo);
 	
 }

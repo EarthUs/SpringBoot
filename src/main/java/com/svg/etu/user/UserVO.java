@@ -9,6 +9,7 @@ public class UserVO {
 	private String nick_name;
 	private String email;
 	private int location;
+	private int steps;
 	private Timestamp created_at;
 	
 	public int getId() {
@@ -46,6 +47,12 @@ public class UserVO {
 	}
 	public void setLocation(int location) {
 		this.location = location;
+	}
+	public int getSteps() {
+		return steps;
+	}
+	public void setSteps(int steps) {
+		this.steps = steps;
 	}
 	public Timestamp getCreated_at() {
 		return created_at;
