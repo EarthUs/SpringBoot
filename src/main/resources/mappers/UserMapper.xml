@@ -5,6 +5,7 @@
     <select id="getUser" resultType="com.svg.etu.user.UserVO">
     	select *
     	from user
+    	where id = #{id}
     </select>
     
     <insert id="insertUser">
