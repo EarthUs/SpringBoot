@@ -32,12 +32,9 @@ public class UserVO {
 		this.location = location;
 	}
 
-	public UserVO update(String img, String nick_name) {
-		this.img = img;
-		this.nick_name = nick_name;
-
-		return this;
+	public String getRoleKey() {
+		return this.role.getKey();
 	}
 }
 
-// findByEmail 추가하기 : 소셜 로그인으로 반환되는 값 중 email을 통해 이미 생성된 사용자인지 처음 가입하는 사용자인지 판단하기 위한 메소드
+// 소셜 로그인으로 반환되는 값 중 email을 통해 이미 생성된 사용자인지 처음 가입하는 사용자인지 판단하기 위한 메소드
