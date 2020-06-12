@@ -16,7 +16,6 @@ public class UserVO {
 	private String img;
 	private String nick_name;
 	private String email;
-	private Role role;
 	private int location; // 현재 위치
 	private int steps; // 총 걸음 수
 	private Timestamp created_at; // 계정 등록 시간
