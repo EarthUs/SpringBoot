@@ -13,7 +13,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserVO getUser(int id) {
 		System.out.println("----------[getUser 함수 호출]----------");
-		UserVO user = sqlSessionTemplate.selectOne("getUser"); 
+		UserVO user = sqlSessionTemplate.selectOne("getUser", id);
 		return user;
 	}
 
