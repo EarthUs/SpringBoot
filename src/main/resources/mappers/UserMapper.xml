@@ -7,7 +7,13 @@
     	from user
     	where id = #{id}
     </select>
-    
+
+	<select id="findByEmail" parameterType="string" resultType="java.lang.Integer">
+		select count(*)
+		from user
+		where email = #{email}
+	</select>
+
     <insert id="insertUser">
     	insert into user(social_type, img, nick_name, email, location, steps, created_at)
     	values(#{social_type}, #{img}, #{nick_name}, #{email}, #{location}, 0, now())
