@@ -4,7 +4,7 @@ public interface UserService {
 	/*
 	 * User 정보를 가져오는 함수
 	 */
-	UserVO getUser(UserVO vo);
+	UserVO getUser(int id);
 	
 	/*
 	 * User 삽입

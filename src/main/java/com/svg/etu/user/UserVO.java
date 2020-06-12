@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 public class UserVO {
 	private int id;
-	private String social_type;
+	private String name;
 	private String img;
 	private String nick_name;
 	private String email;
@@ -18,11 +18,11 @@ public class UserVO {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getSocial_type() {
-		return social_type;
+	public String getName() {
+		return name;
 	}
-	public void setSocial_type(String social_type) {
-		this.social_type = social_type;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getImg() {
 		return img;

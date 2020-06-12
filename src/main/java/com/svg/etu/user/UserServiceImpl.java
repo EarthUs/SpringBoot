@@ -11,7 +11,7 @@ public class UserServiceImpl implements UserService {
 	SqlSessionTemplate sqlSessionTemplate;
 
 	@Override
-	public UserVO getUser(UserVO vo) {
+	public UserVO getUser(int id) {
 		System.out.println("----------[getUser 함수 호출]----------");
 		UserVO user = sqlSessionTemplate.selectOne("getUser"); 
 		return user;

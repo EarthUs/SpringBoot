@@ -4,7 +4,7 @@ public interface UserDAO {
 	/*
 	 * User 정보를 가져오는 함수
 	 */
-	public UserVO getUser(UserVO vo);
+	public UserVO getUser(int id);
 	
 	/*
 	 * User 삽입
