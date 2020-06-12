@@ -19,8 +19,8 @@ public class UserController {
 	 * @return UserVO
 	 */
 	@RequestMapping(method=RequestMethod.GET)
-	public UserVO getUser(UserVO vo) {
-		return userService.getUser(vo);
+	public UserVO getUser(int id) {
+		return userService.getUser(id);
 	}
 	
 	/*

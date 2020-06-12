@@ -45,10 +45,17 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
 
     private UserVO save(OAuthAttributes attributes) {
-        UserVO user = userService.findByEmail(attributes.getEmail())
-                .orElse(attributes.toEntity());
+        int checkUser = userService.findByEmail(attributes.getEmail());
 
-        return userService.saveUser(user);
+        UserVO user = null;
+        if (checkUser == 0) {
+            user = userService.saveUser(attributes.toEntity());
+        }
+        else {
+            user = attributes.toEntity();
+        }
+        return user;
+        // 아이디가 존재할 때 어떻게 처리할 것인지
     }
 }
 

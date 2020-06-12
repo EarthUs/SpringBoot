@@ -11,9 +11,9 @@ public class UserServiceImpl implements UserService {
 	SqlSessionTemplate sqlSessionTemplate;
 
 	@Override
-	public UserVO findByEmail(String email) {
-		UserVO user = sqlSessionTemplate.selectOne("findByEmail");
-		return user;
+	public int findByEmail(String email) {
+		int checkUser = sqlSessionTemplate.selectOne("findByEmail", email);
+		return checkUser;
 	}
 
 	@Override

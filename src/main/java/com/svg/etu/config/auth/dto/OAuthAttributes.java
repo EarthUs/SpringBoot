@@ -34,7 +34,7 @@ public class OAuthAttributes {
         return OAuthAttributes.builder()
                 .name((String) attributes.get("name"))
                 .email((String) attributes.get("email"))
-                .img((String) attributes.get("picture"))
+                .img((String) attributes.get("img"))
                 .attributes(attributes)
                 .nameAttributeKey(userNameAttributeName)
                 .build();
@@ -43,9 +43,12 @@ public class OAuthAttributes {
     public UserVO toEntity() {
         return UserVO.builder()
                 .name(name)
-                .email(email)
                 .img(img)
-                .role(Role.GUEST)
+                .nick_name(name)
+                .email(email)
+                .role(Role.USER)
+                .steps(0)
+                .location(0)
                 .build();
     }
 }

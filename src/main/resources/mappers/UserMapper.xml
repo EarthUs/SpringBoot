@@ -8,8 +8,8 @@
     	where id = #{id}
     </select>
 
-	<select id="findByEmail" parameterType="string" resultType="com.svg.etu.user.UserVO">
-		select *
+	<select id="findByEmail" parameterType="string" resultType="java.lang.Integer">
+		select count(*)
 		from user
 		where email = #{email}
 	</select>
